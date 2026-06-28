@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gauri — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="glass-frame">
+
+    <div class="nav-bar">
+      <div class="name-logo">
+        <div>G</div>
+        <p>Gauri</p>
+      </div>
+      <div class="nav-toggle">
+        <button class="nav-button active" onclick="showPage('work', this)">Work</button>
+        <button class="nav-button" onclick="showPage('about', this)">About</button>
+        <button class="nav-button" onclick="showPage('services', this)">Services</button>
+        <button class="nav-button" onclick="showPage('contact', this)">Contact</button>
+      </div>
+      <div class="talk-button">
+        <button class="nav-button">Let's Talk</button>
+      </div>
+    </div>
+
+    <!-- 
+         WORK PAGE
+   -->
+    <div id="work" class="page active">
+
+      <div class="work-content">
+        <div class="left-content">
+          <div class="quote-section">
+            <div class="title">Graphic Designer</div>
+            <div class="intro-title">
+              <p class="designing">Designing</p>
+              <p class="visual-stories">Visual Stories</p>
+            </div>
+          </div>
+          <p class="intro-description">
+            I craft meaningful digital experiences through
+            thoughtful design and creative direction.
+          </p>
+          <button class="view-work-button">View My Work</button>
+          <div class="design-keyword-container">
+            <p>Design</p>
+            <p>Visual</p>
+            <p>Creative</p>
+          </div>
+        </div>
+
+        <div class="featured-project">
+          <div class="project-image">
+            <img src="project1.jpeg" alt="Project 1" class="project-img">
+          </div>
+          <div class="project-info">
+            <h3>Cosmic Wonders</h3>
+            <p>
+              A surreal space artwork exploring mystery and discovery beyond the universe. 🚀✨
+            </p>
+            <button class="view-project-button">View Project</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add this modal structure after your project div -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-content">
+    <button class="modal-close">&times;</button>
+    <h2>Cosmic Wonders</h2>
+    <img src="project1.jpeg" alt="Project 1" class="modal-img">
+    <p>A surreal space artwork exploring mystery and discovery beyond the universe. 🚀✨</p>
+    <div class="project-details">
+      <!-- Add more project details here -->
+      <p>Full project description and details go here...</p>
+    </div>
+  </div>
+</div>
+
+      <div class="selected-work" id="selected-work">
+        <h2>Selected Work</h2>
+      </div>
+      <div class="project-container">
+        <img src="project2.jpeg" alt="Project 2" data-index="0">
+        <img src="project3.jpeg" alt="Project 3" data-index="1">
+        <img src="project4.jpeg" alt="Project 4" data-index="2">
+        <img src="project5.jpeg" alt="project 5" data-index="3">
+        <img src="project6.jpeg" alt="Project 6" data-index="4">
+        <img src="project7.jpeg" alt="Project 7" data-index="5">
+        <img src="project8.jpeg" alt="Project 8" data-index="6">
+        <img src="project10.jpeg" alt="Project 10" data-index="7">
+        <img src="project11.jpeg" alt="Project 11" data-index="8">
+      </div>
+        <div class="lightbox-overlay" id="lightbox">
+        <div class="lightbox-modal" id="lightbox-modal">
+        <button class="lightbox-close" id="lightbox-close">✕</button>
+        <button class="lightbox-arrow prev" id="prev-btn">&#8592;</button>
+        <button class="lightbox-arrow next" id="next-btn">&#8594;</button>
+        <div class="lightbox-track" id="lightbox-track"></div>
+        <div class="lightbox-dots" id="lightbox-dots"></div>
+    </div>
+    </div>
+    </div>
+
+    <!--
+         ABOUT PAGE
+     -->
+    <div id="about" class="page">
+      <div class="about-grid">
+
+        <div class="card">
+          <div class="about-me-label">About Me</div>
+          <div class="intro-title-serif">
+            <p class="orange">Designing</p>
+            <p>with purpose,<br>building with</p>
+            <p class="orange">passion</p>
+          </div>
+          <div class="about-description">
+            I'm Gauri Kemnaik, a graphic designer and art director
+            crafting visual identities and digital experiences
+            that connect brands with people.
+          </div>
+          <a href="resume.pdf" download="resume.pdf"><button class="download-button">Download CV</button></a>
+        </div>
+
+        <div class="card my-image">
+          <img src="gauri.jpeg" alt="Gauri">
+          <div>
+            <p class="loc">Based in Mumbai</p>
+            <p class="avail">Available for new projects</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="section-label">Experience</div>
+          <div class="experience-item">
+            <div class="timeline-dot"></div>
+            <div>
+              <div class="exp-role">Graphic Design Trainee</div>
+              <div class="exp-company">Professional Design Course</div>
+              <div class="exp-year">2025 — 2026</div>
+            </div>
+          </div>
+          <div class="experience-item">
+            <div class="timeline-dot"></div>
+            <div>
+              <div class="exp-role">Personal Design Projects</div>
+              <div class="exp-company">Branding • Posters • Visual Experiments</div>
+              <div class="exp-year">2026 — Present</div>
+            </div>
+          </div>
+          <div class="experience-item">
+            <div class="timeline-dot"></div>
+            <div>
+              <div class="exp-role">Freelance Practice</div>
+              <div class="exp-company">Concept & Self-Initiated Work</div>
+              <div class="exp-year">Ongoing</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="section-label">Skills</div>
+          <div class="skill-set">
+            <div class="skill-name">Product manipulation</div>
+            <div class="skill-name">Branding</div>
+            <div class="skill-name">Illustration</div>
+            <div class="skill-name">Visual Artistry</div>
+            <div class="skill-name">Typography</div>
+            <div class="skill-name">Color Theory</div>
+            <div class="skill-name">Layout Design</div>
+            <div class="skill-name">Concept Design</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="section-label">Design Philosophy</div>
+          <div class="philosophy-content">
+            <p>Good design is more than aesthetics — it's clarity, emotion, and purpose combined.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="section-label">Education</div>
+          <div class="education-item">
+            <div class="timeline-dot"></div>
+            <div class="education-text">
+              <strong>Professional Graphic Design Course</strong>
+              <p>Visual Design, Branding & Digital Media</p>
+              <span>2025 — 2026</span>
+            </div>
+          </div>
+          <div class="education-item">
+            <div class="timeline-dot"></div>
+            <div class="education-text">
+              <strong>Higher Secondary Education — Science</strong>
+              <p>Physics • Chemistry • Mathematics</p>
+              <span>Completed 2025</span>
+            </div>
+          </div>
+          <div class="education-item">
+            <div class="timeline-dot"></div>
+            <div class="education-text">
+              <strong>Secondary School Certificate (10th)</strong>
+              <p>General Education</p>
+              <span>Completed 2023</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 
+         SERVICES PAGE
+     -->
+    <div id="services" class="page">
+
+      <div class="services-top-row">
+        <div class="intro-container">
+          <p class="intro-text">What I do</p>
+          <h3 class="services-heading">Services</h3>
+          <p class="about-description">
+            I help brands and startups grow through thoughtful design,<br>
+            creative direction, and digital experiences that connect.
+          </p>
+        </div>
+        <div class="design-container">
+          <div class="star">✨</div>
+          <p>Design solutions crafted with clarity, purpose, and attention to detail.</p>
+        </div>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <span class="service-icon">🎨</span>
+          <div class="service-title">Brand Identity</div>
+          <div class="service-desc">Full visual identity systems — logos, color palettes, typography, and brand guidelines that make your business instantly recognisable.</div>
+          <div class="service-tags">
+            <span class="service-tag">Logo Design</span>
+            <span class="service-tag">Brand Guidelines</span>
+            <span class="service-tag">Color Systems</span>
+          </div>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">🖼️</span>
+          <div class="service-title">Visual Artistry & Illustration</div>
+          <div class="service-desc">Custom illustrations, poster design, and product manipulation that bring concepts to life with a distinct artistic voice.</div>
+          <div class="service-tags">
+            <span class="service-tag">Illustration</span>
+            <span class="service-tag">Poster Design</span>
+            <span class="service-tag">Photo Editing</span>
+          </div>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">📐</span>
+          <div class="service-title">Layout & Print Design</div>
+          <div class="service-desc">Beautifully structured layouts for magazines, brochures, packaging, and any printed collateral that demands precision.</div>
+          <div class="service-tags">
+            <span class="service-tag">Typography</span>
+            <span class="service-tag">Print Ready</span>
+            <span class="service-tag">Packaging</span>
+          </div>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">📱</span>
+          <div class="service-title">Digital & Social Design</div>
+          <div class="service-desc">Scroll-stopping social media graphics, digital banners, and UI-ready assets designed for impact across every screen.</div>
+          <div class="service-tags">
+            <span class="service-tag">Social Media</span>
+            <span class="service-tag">Digital Assets</span>
+            <span class="service-tag">UI Design</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 
+         CONTACT PAGE
+  -->
+    <div id="contact" class="page">
+      <div class="contact-content">
+        <div>
+          <h4>Get in touch</h4>
+          <p>Let's Create</p>
+          <p class="orange">Something</p>
+          <p class="orange">Extraordinary</p>
+          <P>Have a project or just want to say Hello?<br>
+            I'd love to hear from you!
+          </P>
+          <div class="contact-grid">
+            <div>
+              <img src="location-icon.png" alt="Location">
+            </div>
+            <div>
+              <p>Based in</p>
+              <h3>Mumbai, India</h3>
+            </div>
+            <div>
+              <img src="email-icon.png" alt="Email">
+            </div>
+            <div>
+              <p>Email</p>
+              <h3>gauriox07@gmail.com</h3>
+            </div>
+            <div>
+              <img src="availability-icon.png" alt="Availability">
+            </div>
+            <div>
+              <p>Availability</p>
+              <h3>Open for new projects</h3>
+            </div>
+          </div>
+          <div class="social-media">
+            <p>Follow Me</p>
+            <a href="https://www.instagram.com/gauri_kemnaik?igsh=NGt0aXV3d2IyZXRq" target="_blank" rel="noopener noreferrer"><img src="instagram-icon.png" alt="Instagram"></a>
+            <a href="https://www.linkedin.com/in/gauri-kemnaik-410b73382?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer"><img src="linkdin-icon.png" alt="LinkedIn"></a>
+          </div>
+        </div>
+        <div class="message-container">
+          <img src="email-icon.png">
+          <h3>Send a Message</h3>
+          <p>Fill out the form below and I'will get back to you shortly!</p>
+          <form onsubmit="send(event)">
+          <div class="name-email-container">
+            <input type="text" id="name" placeholder="Your Name"
+            name="name">
+            <input type="email" id="email" placeholder="Your Email"
+            name="email">
+          </div>
+          <select id="topic" name="topic">
+            <option value="" disabled selected>Select a topic</option>
+            <option value="general">General Inquiry</option>
+            <option value="project">Brand Identity</option>
+            <option value="illustration">Illustration</option>
+            <option value="layout">Layout & Print Design</option>
+            <option value="digital">Digital & Social Design</option>
+            <option value="product-manipulation">Product Manipulation</option>
+          </select>
+          <textarea placeholder="Your Message" name="message"
+          id="message"></textarea>
+          <button type="submit" class="send-message-button">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <h3>Gauri</h3>
+          <p>Designing meaningful visual experiences.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <a href="#" onclick="showPage('work')">Work</a>
+          <a href="#" onclick="showPage('about')">About</a>
+          <a href="#" onclick="showPage('services')">Services</a>
+          <a href="#" onclick="showPage('contact')">Contact</a>
+        </div>
+        <div class="footer-social">
+          <h4>Connect</h4>
+          <a href="https://www.instagram.com/gauri_kemnaik?igsh=NGt0aXV3d2IyZXRq" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.linkedin.com/in/gauri-kemnaik-410b73382?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Gauri. All rights reserved.</p>
+      </div>
+    </footer>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
